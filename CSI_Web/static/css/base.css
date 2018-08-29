@@ -1,0 +1,9 @@
+
+nav, body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.bg-dark{
+    background-color: #000000 !important;
+}

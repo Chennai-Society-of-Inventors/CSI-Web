@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chennai Society of Inventors</title>
+{#    jQuery#}
+    <script src="{% static '/libraries/jquery/jquery.min.js' %}"></script>
+{#    Tether#}
+    <script src="{% static '/libraries/tether-1.3.3/dist/js/tether.min.js' %}"></script>
+{#    Bootstrap#}
+    <script src="{% static '/libraries/bootstrap/js/bootstrap.js' %}"></script>
+
+{#    CSS#}
+    <link rel="stylesheet" href="{% static '/libraries/tether-1.3.3/dist/css/tether.min.css' %}">
+    <link rel="stylesheet" href="{% static '/libraries/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/base.css' %}">
+</head>
+<body>
+{#<nav class="navbar navbar-toggleable-md navbar-expand-sm bg-dark navbar-dark">#}
+{#  <ul class="navbar-nav mr-auto">#}
+{#    <li class="nav-item active">#}
+{#      <a class="nav-link" href="#">Active</a>#}
+{#    </li>#}
+{#    <li class="nav-item">#}
+{#      <a class="nav-link" href="#">Link</a>#}
+{#    </li>#}
+{#    <li class="nav-item">#}
+{#      <a class="nav-link" href="#">Link</a>#}
+{#    </li>#}
+{#  </ul>#}
+{#</nav>#}
+<div id="app" class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+    <img src="{% static 'images/logo.jpg' %}" width="200" height="75" class="d-inline-block align-top align-content-center" alt="">
+  </a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNavDropdown" class="navbar-collapse collapse">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+</body>
+</html>
