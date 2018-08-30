@@ -1,0 +1,55 @@
+.carousel-style {
+    font-size: 30px;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    text-shadow: 2px 2px black;
+}
+
+.heading{
+    font-family: 'Sawarabi Mincho', sans-serif;
+    font-size: 30px;
+}
+
+.modal-body {
+    width: 100%;
+}
+
+#what_we_do_section, .submission {
+    margin-top: 5%;
+}
+
+.problem-part {
+    background-color: lightsalmon;
+    height: 50%;
+}
+
+.solution-part {
+    background-color: lightskyblue;
+    height: 50%;
+}
+
+.submission {
+    height: 40em;
+    width: auto;
+}
+
+.problem-part, .solution-part {
+    -webkit-transition: box-shadow 1s;
+    -moz-transition:    box-shadow 1s;
+    -ms-transition:     box-shadow 1s;
+    -o-transition:      box-shadow 1s;
+    transition:         box-shadow 1s;
+}
+
+.problem-part:hover, .solution-part:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.24);
+    -webkit-transition: box-shadow 1s;
+    -moz-transition:    box-shadow 1s;
+    -ms-transition:     box-shadow 1s;
+    -o-transition:      box-shadow 1s;
+    transition:         box-shadow 1s;
+}
+
+.margin-top-5{
+    margin-top: 5%;
+  }

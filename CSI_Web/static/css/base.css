@@ -1,5 +1,5 @@
 
-nav, body, #app {
+.modal-body, nav, body, #app {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
@@ -23,10 +23,19 @@ nav, body, #app {
 
 .navbar-dark .navbar-nav .nav-link:hover {
     color: orangered;
-    transition-delay: 300ms;
-    transition-timing-function: ease;
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+
+.nav-link:active {
+    color: orangered !important;
 }
 
 #app {
     border-bottom: 2px solid white;
+    position: fixed;
+    z-index: 500;
 }

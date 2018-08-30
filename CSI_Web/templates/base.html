@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Chennai Society of Inventors</title>
+{#Fonts#}
+    <link href="{% static '/fonts/Sawarabi_Mincho/SawarabiMincho-Regular.ttf' %}" rel="stylesheet">
+    <style>
+    @import url("{% static 'fonts/Sawarabi_Mincho/SawarabiMincho-Regular.ttf' %}");
+    </style>
 {#    jQuery#}
     <script src="{% static '/libraries/jquery/jquery.min.js' %}"></script>
 {#    Tether#}
@@ -31,17 +36,17 @@
             <ul class="navbar-nav mr-auto">
             </ul>
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">What We Do</a>
+                    <a class="nav-link {% block what_we_do_active %}{% endblock %}" href="">What We Do</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Join Us</a>
+                    <a class="nav-link {% block join_us_active %}{% endblock %}" href="">Join Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Contact</a>
+                    <a class="nav-link {% block contact_active %}{% endblock %}" href="">Contact</a>
                 </li>
             </ul>
         </div>
