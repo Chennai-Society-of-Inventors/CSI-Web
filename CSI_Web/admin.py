@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from CSI_Web.models import CarouselInfo
+
+admin.site.register(CarouselInfo)
