@@ -2,6 +2,7 @@
 {% load staticfiles %}
 {% block headers %}
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
 {% endblock %}
 {% block content %}
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -66,25 +67,42 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form class="margin-form">
+                        <form class="margin-form" id="problem-form" action="submitproblem" method="post">
                           <div class="form-group">
                             <label for="problemCategory">Problem Category</label>
                             <input type="text" class="form-control" id="problemCategory" aria-describedby="problemHelp" placeholder="Road Problem, Water Issues etc">
                           </div>
                           <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <label for="problemDescription">Problem Description</label>
+                            <textarea class="form-control" id="problemDescription" value=""
+                                   placeholder="Give a short description about the problem">
+                            </textarea>
                           </div>
-                          <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            <div class="form-group">
+                            <label for="name">Name</label>
+                            <input name="user_name" type="text" class="form-control" id="name"
+                                   placeholder="Enter your name">
                           </div>
-                          <button type="submit" class="btn btn-primary">Submit</button>
+                          <div class="form-group">
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="text" class="form-control" id="contactNumber"
+                                   placeholder="Enter your Contact Number">
+                          </div>
+                          <div class="form-group">
+                            <label for="contactAddress">Contact Address</label>
+                            <input type="text" class="form-control" id="contactAddress"
+                                   placeholder="Enter your Contact Address">
+                          </div>
+                          <div class="form-group">
+                            <label for="emailId">E-Mail ID</label>
+                            <input type="email" class="form-control" id="emailId"
+                                   placeholder="Enter your Email ID">
+                          </div>
+                            <div class="modal-footer">
+                                <button onclick="submitProblem()" id="problemButton" type="button" class="btn btn-primary">Submit your problem</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
                         </form>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Submit your problem</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       </div>
                     </div>
                   </div>
@@ -101,20 +119,46 @@
                     </div>
                 </div>
                 <div class="modal fade" id="solutionModal" tabindex="-1" role="dialog" aria-labelledby="solutionModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
+                  <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="solutionModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="solutionModalLabel">Submit your Invention</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Submit your Invention</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <form class="margin-form">
+                          <div class="form-group">
+                            <label for="invention">Invention</label>
+                            <input type="text" class="form-control" id="invention" aria-describedby="problemHelp" placeholder="Write the name of your invention">
+                          </div>
+                          <div class="form-group">
+                            <label for="abstract">Abstract</label>
+                            <textarea class="form-control" id="inventionProblemDescription"
+                                   placeholder="Give a short description about your invention">
+                            </textarea>
+                          </div>
+                            <div class="form-group">
+                            <label for="teamDetails">Team Details</label>
+                            <input type="text" class="form-control" id="teamDetails"
+                                   placeholder="Enter details of your team members">
+                          </div>
+                          <div class="form-group">
+                            <label for="inventionContactNumber">Contact Number</label>
+                            <input type="text" class="form-control" id="inventorContactNumber"
+                                   placeholder="Enter your Contact Number">
+                          </div>
+                          <div class="form-group">
+                            <label for="emailId">E-Mail ID</label>
+                            <input type="email" class="form-control" id="inventorEmailId"
+                                   placeholder="Enter your Email ID">
+                          </div>
+                            <div class="modal-footer">
+                                <button onclick="submitInvention()" type="button" class="btn btn-primary">Submit your Invention</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>
                       </div>
                     </div>
                   </div>

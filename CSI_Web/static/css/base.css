@@ -22,7 +22,7 @@
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: orangered;
+    color: yellow;
     -webkit-transition: color 1s;
     -moz-transition:    color 1s;
     -ms-transition:     color 1s;
@@ -31,7 +31,7 @@
 }
 
 .nav-link:active {
-    color: orangered !important;
+    color: yellow !important;
 }
 
 #app {
